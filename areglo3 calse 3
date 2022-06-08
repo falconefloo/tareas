@@ -1,0 +1,42 @@
+import numpy as np
+arreglo=np.random.randint(100,size=(4,5))
+m0=np.array(arreglo)
+print(m0)
+
+sufi=[]
+f0=m0[0,:].sum()
+sufi.append(f0)
+f1=m0[1,:].sum()
+sufi.append(f1)
+f2=m0[2,:].sum()
+sufi.append(f2)
+f3=m0[3,:].sum()
+sufi.append(f3)
+
+colu=np.sum(m0,axis=0)
+print("esta la suma por columnas: ")
+print(colu)
+
+numdiag=np.diag(m0)
+sumdiag=sum(numdiag)
+print("esta es la suma de los numeros diagonales :")
+
+impares=[]
+fi0=m0[0,:]
+fi1=m0[1,:]
+fi2=m0[2,:]
+fi3=m0[3,:]
+for i in fi0:
+  if i%2!=0:
+    impares.append(i)
+for i in fi1:
+  if i%2!=1:
+    impares.append(i)
+for i in fi2:
+  if i%2!=2:
+    impares.append(i)
+for i in fi3:
+  if i%2!=3:
+    impares.append(i)
+print("estos son los numerosimpares :")
+print(impares)
